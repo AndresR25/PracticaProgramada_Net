@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PracticaNo3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Alumno">
+    <Key>
+      <PropertyRef Name="carnet" />
+    </Key>
+    <Property Name="carnet" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellido" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="genero" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telefono" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FechaNacimiento" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="PracticaNo3Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Alumno" EntityType="Self.Alumno" />
+  </EntityContainer>
+</Schema>

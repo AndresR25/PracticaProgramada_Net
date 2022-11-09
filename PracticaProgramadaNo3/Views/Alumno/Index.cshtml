@@ -1,0 +1,42 @@
+﻿@model PracticaProgramadaNo3.Models.ViewModel.AlumnoModelo
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_myLayoutPage.cshtml";
+}
+
+<h2>Guardar Alumno</h2>
+<form action="~/Alumno/Guardar" method="post">
+    
+        @Html.LabelFor(model => model.carnet)
+        @Html.TextBoxFor(model => model.carnet, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.carnet, "", new { @class = "text-danger" })
+        <br />
+        @Html.LabelFor(model => model.nombre)
+        @Html.TextBoxFor(model => model.nombre, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+        <br />
+        @Html.LabelFor(model => model.apellido)
+        @Html.TextBoxFor(model => model.apellido, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.apellido, "", new { @class = "text-danger" })
+        <br />
+        @Html.LabelFor(model => model.genero)
+        @Html.TextBoxFor(model => model.genero, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.genero, "", new { @class = "text-danger" })
+        <br />
+        @Html.LabelFor(model => model.email)
+        @Html.TextBoxFor(model => model.email, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+        <br />
+        @Html.LabelFor(model => model.telefono)
+        @Html.TextBoxFor(model => model.telefono, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.telefono, "", new { @class = "text-danger" })
+        <br />
+        @Html.LabelFor(model => model.FechaNacimiento)
+        @Html.TextBoxFor(model => model.FechaNacimiento,"{0:d MMM yyyy}", new { @class = "form-control"})
+        @Html.ValidationMessageFor(model => model.FechaNacimiento, "", new { @class = "text-danger" })
+        <br />
+        <button type="submit">Agregar Alumno</button>
+
+  
+</form>
+
